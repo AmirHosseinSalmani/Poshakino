@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "مردانه",
+    "slug": "men",
+    "children": [
+      {
+        "id": 101,
+        "title": "شلوار مردانه",
+        "slug": "pants"
+      },
+      {
+        "id": 102,
+        "title": "کفش مردانه",
+        "slug": "shose"
+      },
+      { "id": 103, "title": "پراهن مردانه", "slug": "shirt" }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "زنانه",
+    "slug": "women",
+    "children": [
+      {
+        "id": 101,
+        "title": "شلوار مردانه",
+        "slug": "pants"
+      },
+      {
+        "id": 102,
+        "title": "کفش مردانه",
+        "slug": "shose"
+      },
+      { "id": 103, "title": "پراهن مردانه", "slug": "shirt" }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "پسر",
+    "slug": "boy",
+    "children": [
+      {
+        "id": 101,
+        "title": "شلوار مردانه",
+        "slug": "pants"
+      },
+      {
+        "id": 102,
+        "title": "کفش مردانه",
+        "slug": "shose"
+      },
+      { "id": 103, "title": "پراهن مردانه", "slug": "shirt" }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "دخترانه",
+    "slug": "girl",
+    "children": [
+      {
+        "id": 101,
+        "title": "شلوار مردانه",
+        "slug": "pants"
+      },
+      {
+        "id": 102,
+        "title": "کفش مردانه",
+        "slug": "shose"
+      },
+      { "id": 103, "title": "پراهن مردانه", "slug": "shirt" }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "اسپرت",
+    "slug": "men",
+    "children": [
+      {
+        "id": 101,
+        "title": "شلوار مردانه",
+        "slug": "pants"
+      },
+      {
+        "id": 102,
+        "title": "کفش مردانه",
+        "slug": "shose"
+      },
+      { "id": 103, "title": "پراهن مردانه", "slug": "shirt" }
+    ]
+  }
+]
