@@ -1,91 +1,130 @@
 [
   {
     "id": 1,
-    "category": { "name": "مردانه", "children": "پیراهن"},
+    "name": " 1 جاکت",
+    "colors": ["red", "black"],
+    "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
+    "image": "/image/2081.jpg",
+    "price": 590000,
+    "count": 10,
     "rating": { "rate": 3.9, "count": 100 }
   },
   {
     "id": 2,
+    "name": "جاکت 2",
+    "colors": ["red", "black"],
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
-    "rating": { "rate": 3.9, "count": 100 }
+    "image": "/image/2081.jpg",
+    "price": 970000,
+    "count": 12,
+    "rating": { "rate": 3.9, "count": 100 },
+    "offer": 45000
   },
   {
     "id": 3,
+    "colors": ["red", "black"],
+    "name": "جاکت 3",
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
-    "rating": { "rate": 3.9, "count": 100 }
+    "image": "/image/2081.jpg",
+    "price": 820000,
+    "count": 8,
+    "rating": { "rate": 3.9, "count": 100 },
+    "offer": 45000
   },
   {
     "id": 4,
+    "name": "جاکت 4",
+    "colors": ["red", "black"],
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
-    "rating": { "rate": 3.9, "count": 100 }
+    "image": "/image/2081.jpg",
+    "price": 590000,
+    "count": 11,
+    "rating": { "rate": 3.9, "count": 100 },
+    "offer": 45000
   },
   {
     "id": 5,
+    "name": "جاکت 5",
+    "colors": ["black"],
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
+    "image": "/image/2081.jpg",
+    "price": 290000,
+    "count": 22,
     "rating": { "rate": 3.9, "count": 100 }
   },
   {
     "id": 6,
+    "name": "جاکت 6",
+    "colors": ["red", "black"],
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
-    "rating": { "rate": 3.9, "count": 100 }
+    "image": "/image/2081.jpg",
+    "price": 390000,
+    "count": 47,
+    "rating": { "rate": 3.9, "count": 100 },
+    "offer": 45000
   },
   {
     "id": 7,
+    "name": "جاکت 7",
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
-    "rating": { "rate": 3.9, "count": 100 }
+    "image": "/image/2081.jpg",
+    "price": 990000,
+    "count": 10,
+    "rating": { "rate": 3.9, "count": 100 },
+    "offer": 45000
   },
   {
     "id": 8,
+    "name": "جاکت 8",
+    "colors": ["red", "black"],
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
+    "image": "/image/2081.jpg",
+    "price": 590000,
+    "count": 6,
     "rating": { "rate": 3.9, "count": 100 }
   },
   {
     "id": 9,
+    "name": "جاکت 9",
+    "colors": ["red", "black"],
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590
+    "image": "/image/2081.jpg",
+    "price": 660000,
+    "count": 10,
+    "rating": { "rate": 3.9, "count": 100 },
+    "offer": 45000
   },
   {
     "id": 10,
-    "name": "جاکت",
+    "name": "جاکت 10",
+    "colors": ["red", "black"],
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
-    "rating": { "rate": 3.9, "count": 100 }
+    "image": "/image/2081.jpg",
+    "price": 1000000,
+    "count": 10,
+    "rating": { "rate": 3.9, "count": 100 },
+    "offer": 45000
   },
   {
     "id": 11,
-    "name": "جاکت",
+    "name": "جاکت 11",
+    "colors": ["red", "black"], 
     "category": { "name": "مردانه", "children": "پیراهن" },
     "abuotProduct": " سایز 43 تا 46",
-    "image": "https://nargiz.ir/wp-content/uploads/2026/04/f7f20482-9aaf-4013-a7fc-d30ce730673f.png",
-    "price": 590,
-    "rating": { "rate": 3.9, "count": 100 }
+    "image": "/image/2081.jpg",
+    "price": 890000,
+    "count": 108,
+    "rating": { "rate": 3.9, "count": 100 },
+    "offer": 45000
   }
 ]

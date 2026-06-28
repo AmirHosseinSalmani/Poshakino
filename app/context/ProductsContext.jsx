@@ -1,9 +1,9 @@
-import { createContext } from "react";
+// import { createContext } from "react";
 
-export const ProductsContext = createContext();
+// export const ProductsContext = createContext();
 
-export const ProductsProvider({children}){
-    return(
+// export const ProductsProvider({children}){
+//     return(
         
-    )
-}
+//     )
+// }

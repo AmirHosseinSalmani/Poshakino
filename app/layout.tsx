@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Vazirmatn, Lalezar, Cairo } from "next/font/google";
 import "./globals.css";
+import { ShoppingProvider } from "./context/ShoppingContext";
 
 const vazirmatn = Vazirmatn({
   subsets: ["arabic"],
@@ -34,9 +35,11 @@ export default function RootLayout({
     <html
       lang="fa"
       dir="rtl"
-      className={`${lalezar.variable} ${vazirmatn.variable} ${cairo.variable}h-full antialiased`}
+      className={`${lalezar.variable} ${vazirmatn.variable} ${cairo.variable}h-full antialiased font-vazir`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col mb-10">
+        <ShoppingProvider>{children}</ShoppingProvider>
+      </body>
     </html>
   );
 }

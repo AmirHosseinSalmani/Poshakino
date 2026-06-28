@@ -21,7 +21,7 @@ function CategoryPage({ isOpen }) {
   }, []);
   return (
     <nav
-      className={` grid grid-cols-4 absolute top-full tablet:left-2/11 laptop:left-1/9 desktop:left-2/22 ${isOpen ? "opacity-100 visible" : "opacity-0 invisible"} laptop:w-[94%] tablet:w-[88%] h-84 border-t-0 border-foter rounded-b-2xl bg-background border z-50 shadow-md p-5 transition-all ease-in-out duration-300 `}
+      className={` grid grid-cols-4 absolute top-full tablet:left-2/11 laptop:left-1/9 desktop:left-2/22 ${isOpen ? "opacity-100 visible" : "opacity-0 hidden invisible"} laptop:w-[94%] tablet:w-[88%] h-84 border-t-0 border-foter rounded-b-2xl bg-background border z-50 shadow-md p-5 transition-all ease-in-out duration-300 `}
     >
       {product?.map((category) => (
         <div key={category.id}>

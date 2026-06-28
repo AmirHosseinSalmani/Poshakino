@@ -5,18 +5,22 @@ import { IoInformationCircle } from "react-icons/io5";
 import { IoHomeSharp } from "react-icons/io5";
 import { FaStore } from "react-icons/fa";
 import { BiChevronDown } from "react-icons/bi";
-import CategoryPage from "@/app/components/header/Menu/CategoryPage";
+import CategoryPage from "@/app/components/header/menu/CategoryPage";
 import { useState } from "react";
+import Link from "next/link";
 function NavarPage() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <nav className="relative mt-2">
+    <nav className="relative mt-2 hidden laptop:block">
       <ul className="flex gap-3.5 font-cairo text-[14px] font-medium ">
-        <li className="relative group flex items-center gap-1.5 transition-colors duration-100  cursor-pointer">
+        <Link
+          href={"/"}
+          className="relative group flex items-center gap-1.5 transition-colors duration-100  cursor-pointer"
+        >
           <IoHomeSharp size={14} />
           <p>صفحه اصلی</p>
           <div className="absolute bottom-0 left-1/2 w-0 h-px bg-primary group-hover:w-full group-hover:left-0 transition-all duration-500 ease-in-out "></div>
-        </li>
+        </Link>
         <li
           className="relative flex items-center gap-1.5 py-4 group transition-colors duration-100 cursor-pointer"
           onMouseEnter={() => setIsOpen(true)}

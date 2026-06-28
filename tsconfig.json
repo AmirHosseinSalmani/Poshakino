@@ -28,7 +28,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "app/context/ShoppingContext.jsx"  ],
+    "**/*.mts",
+    "app/context/ShoppingContext.jsx",
+    "app/components/products/GetProduct.t/s"
+  ],
   "exclude": ["node_modules"]
 }

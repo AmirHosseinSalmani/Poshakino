@@ -1,7 +1,7 @@
 import { FiSearch } from "react-icons/fi";
 function SearchBar() {
   return (
-    <div className="relative border-[0.1px] border-gray-300 w-[40%] h-9 pr-13 rounded-lg laptop:w-[90%] tablet:w-86 tablet:h-9  laptop:h-10.25 tablet:pr-15">
+    <div className="relative border-[0.1px] border-gray-300 w-full h-9 pr-13 rounded-lg laptop:w-[90%] tablet:w-86 tablet:h-9  laptop:h-10.25 tablet:pr-15">
       <span className="absolute right-0 p-1.75 px-2.5 rounded-r-lg  bg-primary cursor-pointer hover: text-background laptopt:px-3 laptop:py-2 ">
         <FiSearch className=" text-xl laptop:text-2xl" />
       </span>

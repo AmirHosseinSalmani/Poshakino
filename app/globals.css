@@ -5,14 +5,14 @@
   --color-text: #111925;
   --color-bg-gradient: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   --color-background: #fcfbfe;
-  --color-eticet: #2498f1;
+  --color-eticet: #1688f1;
   --color-primary: #10ba3df8;
   --color-red: #ff324b;
   --color-redFoter: rgba(252, 25, 25, 0.575);
   --color-star: #ffbf0a;
-  --color-foterText: rgba(180, 180, 180);
+  --color-foterText: rgba(148, 148, 148);
   --color-foter: rgb(183, 185, 186);
-  --color-foterli: rgb(232, 234, 236);
+  --color-foterli: rgb(220, 220, 230);
   /* #bdbdbd */
 
   /* fonts */
