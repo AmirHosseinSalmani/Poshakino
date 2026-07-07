@@ -4,8 +4,13 @@ import { useShoppingCart } from "@/app/context/ShoppingContext";
 import { LuTrash2 } from "react-icons/lu";
 import Image from "next/image";
 import Link from "next/link";
+import { ProductProps } from "@/app/types/products";
 
-function ShoppingPage({ product }) {
+type ShoppingPageProp = {
+  product: ProductProps;
+};
+
+function ShoppingPage({ product }: ShoppingPageProp) {
   const { incerease, reduction, removeItem } = useShoppingCart();
   const [countProduct, setContProduct] = useState(1);
   const sumPrice = product.price * countProduct;
@@ -44,7 +49,11 @@ function ShoppingPage({ product }) {
             <button
               className="text-xl cursor-pointer px-2"
               onClick={() =>
-                incerease(product.count, setContProduct, countProduct)
+                incerease({
+                  count: product.count,
+                  countProduct,
+                  setContProduct,
+                })
               }
             >
               +
@@ -52,10 +61,13 @@ function ShoppingPage({ product }) {
             <p className="font-vazir">{countProduct.toLocaleString("fa-IR")}</p>
             <button
               className="text-xl px-2 cursor-pointer"
-              onClick={() => reduction(setContProduct, countProduct)}
+              onClick={() => reduction({ setContProduct, countProduct })}
             >
               {countProduct == 1 ? (
-                <LuTrash2 size={14} onClick={() => removeItem(product.id)} />
+                <LuTrash2
+                  size={14}
+                  onClick={() => removeItem({ productId: product.id })}
+                />
               ) : (
                 "-"
               )}

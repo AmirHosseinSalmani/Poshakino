@@ -1,16 +1,12 @@
-type category = {
-  name: string;
-  children: string;
-};
-type rating = {
-  rate: number;
-  count: number;
-};
-export type ProductsType = {
+export type ProductProps = {
   id: number;
-  category: category[];
+  name: string;
+  color: string[];
+  category: { name: string; children: string };
   abuotProduct: string;
   image: string;
   price: number;
-  rating: rating[];
+  count: number;
+  rating: { rate: number; count: number };
+  offer: number;
 };

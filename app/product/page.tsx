@@ -1,20 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ProductProps } from "../types/products";
 
-export type ProductProps = {
-  product: {
-    id: number;
-    name: string;
-    category: { name: string; children: string };
-    abuotProduct: string;
-    image: string;
-    price: number;
-    count: number;
-    rating: { rate: number; count: number };
-    offer?: number;
-  };
+type Products = {
+  product: ProductProps;
 };
-function Products({ product }: ProductProps) {
+function Products({ product } : Products) {
   // const [id, category, abuotProduct, image, price, rating] = props;
   // console.log(id);
   return (

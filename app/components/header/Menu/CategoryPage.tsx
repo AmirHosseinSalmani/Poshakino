@@ -3,7 +3,11 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { CategoryNode } from "@/app/types/category";
 
-function CategoryPage({ isOpen }) {
+type CategoryPageProp = {
+  isOpen: boolean;
+};
+
+function CategoryPage({ isOpen }: CategoryPageProp) {
   const [product, setProduct] = useState<CategoryNode[]>([]);
 
   useEffect(() => {

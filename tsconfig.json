@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "app/context/ShoppingContext.jsx",
+    "app/context/ShoppingContext.tsx",
     "app/components/products/GetProduct.t/s"
   ],
   "exclude": ["node_modules"]

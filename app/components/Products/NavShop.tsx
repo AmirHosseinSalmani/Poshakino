@@ -1,9 +1,13 @@
 "use client";
 import { useShoppingCart } from "@/app/context/ShoppingContext";
-import type { ProductProps } from "@/app/product/page";
+import { ProductProps } from "@/app/types/products";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
-function NavShop({ product }: ProductProps) {
+
+type NavShop = {
+  product: ProductProps;
+};
+function NavShop({ product }: NavShop) {
   const { addToBasket, basket } = useShoppingCart();
   const isInBasket = basket.some((cart) => cart.id === product.id);
   const priceOffer = product.price - product.offer!;
@@ -34,7 +38,7 @@ function NavShop({ product }: ProductProps) {
           >
             <button
               className="cursor-pointer px-5 py-3 rounded-lg bg-primary text-background text-[13px] font-vazir"
-              onClick={() => addToBasket(product)}
+              onClick={() => addToBasket({product})}
             >
               افزودن به سبد خرید
             </button>
@@ -49,7 +53,9 @@ function NavShop({ product }: ProductProps) {
                 <p>{product.price.toLocaleString("fa-IR")}</p>
                 <p className="text-sm">تومان</p>
               </div>
-              <p className="text-sm text-foterText">{priceOffer.toLocaleString("fa-IR")}</p>
+              <p className="text-sm text-foterText">
+                {priceOffer.toLocaleString("fa-IR")}
+              </p>
             </>
           ) : (
             <div className="flex items-center gap-1">

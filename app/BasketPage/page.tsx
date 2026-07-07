@@ -1,5 +1,4 @@
 "use client";
-import { div } from "framer-motion/client";
 import { useShoppingCart } from "../context/ShoppingContext";
 import ShoppingPage from "../pages/ShoppingBasket/page";
 import NotProduct from "../pages/ShoppingBasket/NotProduct";
@@ -15,7 +14,7 @@ function BasketPage() {
         {basket.length === 0 ? (
           <NotProduct />
         ) : (
-          <ul className="grid grid-col gap-3 laptop:grid-cols-3">
+          <ul className="grid grid-col gap-3 laptop:grid-cols-3 bor">
             {basket.map((list) => (
               <ShoppingPage product={list} key={list.id} />
             ))}

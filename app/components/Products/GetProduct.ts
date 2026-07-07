@@ -1,4 +1,4 @@
-export async function getProduct() {
+export async function GetProduct() {
   const res = await fetch("http://localhost:3000/Api/product/Product.json");
   if (!res.ok) {
     throw new Error("محصولی وجود ندارد");

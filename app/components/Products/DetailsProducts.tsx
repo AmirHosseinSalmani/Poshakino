@@ -1,4 +1,10 @@
-function DetailsProducts({ details }) {
+import { ProductProps } from "@/app/types/products";
+
+type DetailsProducts = {
+  details: ProductProps;
+};
+
+function DetailsProducts({ details }: DetailsProducts) {
   return (
     <div>
       <div className="text-eticet font-lalezar border-b border-foterli py-5">

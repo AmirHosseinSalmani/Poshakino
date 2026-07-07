@@ -1,6 +1,6 @@
-import { getProduct } from "@/app/components/products/GetProdut";
+import { GetProduct } from "@/app/components/products/GetProduct";
 import React from "react";
-import { ProductProps } from "../page";
+import { ProductProps } from "@/app/types/products";
 import HeaderPage from "@/app/pages/Header/page";
 import Image from "next/image";
 import NavShop from "@/app/components/products/NavShop";
@@ -13,12 +13,12 @@ type PageProps = {
     id: number;
   };
 };
-type colorProps ={
-  color:string
-}
+type colorProps = {
+  color: string;
+};
 async function ProductDetails({ params }: PageProps) {
   const { id } = await params;
-  const products = await getProduct();
+  const products = await GetProduct();
 
   const Product = products.find(
     (product: ProductProps) => product.id === Number(id),
@@ -27,7 +27,7 @@ async function ProductDetails({ params }: PageProps) {
     <div className="relative laptop:static">
       <HeaderPage />
       <HeaderMobile />
-      <div className="flex justify-center gap-2 flex-col p-5 laptop:flex-row w-full">
+      <div className="flex justify-center gap-2 flex-col p-5 laptop:flex-row w-full laptop:mt-25">
         <SpecialOffer />
         <div className="flex flex-col justify-center gap-10 w-full laptop:flex-row items-center laptop:w-8/10 border border-foterli rounded-xl">
           <div className="p-4">
@@ -43,9 +43,13 @@ async function ProductDetails({ params }: PageProps) {
             <p className="border-b border-foterli text-xl">{Product.name}</p>
             <div className="flex gap-3">
               <p>رنگ بندی:</p>
-              {Product.colors.map((color:colorProps) => 
-                <div style={{backgroundColor:`${color}`}} key={color} className="w-5 h-5 rounded-2xl border border-background"></div>
-              )}
+              {Product.colors.map((color: colorProps) => (
+                <div
+                  style={{ backgroundColor: `${color}` }}
+                  className="w-5 h-5 rounded-2xl border border-background"
+                  key={`${color}`}
+                ></div>
+              ))}
             </div>
           </div>
           <div className=" wfulllaptop:w-1/5 p-4">
