@@ -11,11 +11,12 @@ type ShoppingPageProp = {
 };
 
 function ShoppingPage({ product }: ShoppingPageProp) {
+  console.log(product);
   const { incerease, reduction, removeItem } = useShoppingCart();
   const [countProduct, setContProduct] = useState(1);
   const sumPrice = product.price * countProduct;
   const sumPriceOffer = product.offer * countProduct;
-  const priceOffer = product.price * countProduct - sumPriceOffer;
+  const priceOffer = (product.price * countProduct) - sumPriceOffer;
   return (
     <div>
       <div className="h-54 border-b border-foterli rounded-lg laptop:border p-5">

@@ -9,6 +9,7 @@ function FetchPage() {
     async function FetchProducts() {
       try {
         const res = await fetch("Api/product/Product.json");
+        console.log(res);
         if (!res.ok) {
           throw new Error("محصولی وجود ندارد");
         }
@@ -16,6 +17,7 @@ function FetchPage() {
         setProducts(data);
       } catch (err) {
         console.error(err);
+        console.log(err);
       }
     }
     FetchProducts();

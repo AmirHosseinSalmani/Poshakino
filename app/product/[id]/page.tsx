@@ -1,5 +1,4 @@
 import { GetProduct } from "@/app/components/products/GetProduct";
-import React from "react";
 import { ProductProps } from "@/app/types/products";
 import HeaderPage from "@/app/pages/Header/page";
 import Image from "next/image";
@@ -7,6 +6,7 @@ import NavShop from "@/app/components/products/NavShop";
 import SpecialOffer from "@/app/components/products/SpecialOffer";
 import DetailsProducts from "@/app/components/products/DetailsProducts";
 import HeaderMobile from "@/app/components/header/HeaderMobile";
+import { notFound } from "next/navigation";
 
 type PageProps = {
   params: {
@@ -23,6 +23,9 @@ async function ProductDetails({ params }: PageProps) {
   const Product = products.find(
     (product: ProductProps) => product.id === Number(id),
   );
+  if (!Product) {
+    return notFound();
+  }
   return (
     <div className="relative laptop:static">
       <HeaderPage />
