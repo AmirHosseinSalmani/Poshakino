@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Products from "../../product/page";
+import ProductsCard from "./ProductsCard";
 import { ProductProps } from "@/app/types/products";
 
 function FetchPage() {
@@ -27,7 +27,7 @@ function FetchPage() {
     <ul className="grid grid-cols-2 items-center tablet:border border-foterli  p-6 rounded-lg gap-11 desktop:grid-cols-5 laptop:grid-cols-4 tablet:grid-cols-3">
       {products.map((product) => (
         <li key={product.id}>
-          <Products product={product} />
+          <ProductsCard product={product} />
         </li>
       ))}
     </ul>

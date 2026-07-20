@@ -1,6 +1,6 @@
 "use client";
 import { useShoppingCart } from "../context/ShoppingContext";
-import ShoppingPage from "../pages/ShoppingBasket/page";
+import ShoppingPage from "../pages/ShoppingBasket/ShoppingPage";
 import NotProduct from "../pages/ShoppingBasket/NotProduct";
 import HeaderPage from "../pages/Header/page";
 import MobileNav from "../pages/Header/MobileNav";

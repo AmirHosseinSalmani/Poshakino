@@ -1,8 +1,7 @@
 "use client";
-
 import { createContext, useContext, useEffect } from "react";
 import { useState } from "react";
-import { ProductProps } from "../types/products";
+import { BasketItemProps, ProductProps } from "../types/products";
 import { ReactNode } from "react";
 
 type ShoppingProviderProp = {
@@ -11,57 +10,54 @@ type ShoppingProviderProp = {
 type AddToBasket = {
   product: ProductProps;
 };
-interface Reduction {
-  setContProduct: React.Dispatch<React.SetStateAction<number>>;
-  countProduct: number;
-}
-interface Incerease extends Reduction {
-  count: number;
-}
-type RemoveItem = {
-  productId: number;
+type ProductID = {
+  productID: number;
 };
 type ShoppingContextType = {
-  basket: ProductProps[];
-  incerease: (prop: Incerease) => void;
-  reduction: (prop: Reduction) => void;
+  basket: BasketItemProps[];
+  incerease: (prop: ProductID) => void;
+  reduction: (prop: ProductID) => void;
   addToBasket: (prop: AddToBasket) => void;
-  removeItem: (prop: RemoveItem) => void;
+  removeItem: (prop: ProductID) => void;
 };
 const ShoppingContext = createContext<ShoppingContextType | null>(null);
 
 export function ShoppingProvider({ children }: ShoppingProviderProp) {
-  const [basket, setBasket] = useState<ProductProps[]>(() => {
-    if (typeof window === "undefined") return [];
+  const [basket, setBasket] = useState<BasketItemProps[]>([]);
+  useEffect(() => {
+  const data = localStorage.getItem('basket');
 
-    const data = localStorage.getItem("basket");
-
-    return data ? JSON.parse(data) : [];
-  });
-
+  if (data) {
+    setBasket(JSON.parse(data));
+  }
+  }, []);
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
   }, [basket]);
 
-  const incerease = ({ count, setContProduct, countProduct }: Incerease) => {
-    if (countProduct < count) {
-      setContProduct(countProduct + 1);
-    }
+  const incerease = ({ productID }: ProductID) => {
+    setBasket((prev) =>
+      prev.map((pro) =>
+        pro.id === productID ? { ...pro, quantity: pro.quantity + 1 } : pro,
+      ),
+    );
   };
-  const reduction = ({ setContProduct, countProduct }: Reduction) => {
-    if (countProduct > 1) {
-      setContProduct(countProduct - 1);
-    }
+  const reduction = ({ productID }: ProductID) => {
+    setBasket((prev) =>
+      prev.map((pro) =>
+        pro.id === productID ? { ...pro, quantity: pro.quantity - 1 } : pro,
+      ),
+    );
   };
   function addToBasket({ product }: AddToBasket) {
     const isInBasket = basket.some((cart) => cart.id === product.id);
     if (!isInBasket) {
-      setBasket((cart) => [...cart, product]);
+      setBasket((cart) => [...cart, { ...product, quantity: 1 }]);
     }
   }
 
-  function removeItem({ productId }: RemoveItem) {
-    setBasket((prev) => prev.filter((cart) => cart.id !== productId));
+  function removeItem({ productID }: ProductID) {
+    setBasket((prev) => prev.filter((cart) => cart.id !== productID));
   }
 
   return (

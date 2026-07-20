@@ -10,3 +10,6 @@ export type ProductProps = {
   rating: { rate: number; count: number };
   offer: number;
 };
+export type BasketItemProps = ProductProps & {
+    quantity: number;
+};

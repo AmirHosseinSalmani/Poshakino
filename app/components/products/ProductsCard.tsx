@@ -1,13 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProductProps } from "../types/products";
+import { ProductProps } from "../../types/products";
 
 type Products = {
   product: ProductProps;
 };
-function Products({ product } : Products) {
-  // const [id, category, abuotProduct, image, price, rating] = props;
-  // console.log(id);
+
+function ProductsCard({ product }: Products) {
   return (
     <Link key={product.id} href={`/product/${product.id}`}>
       <div className="border w-[90%]  border-foterli shadow-xl rounded-xl cursor-pointer">
@@ -19,7 +18,7 @@ function Products({ product } : Products) {
           className=" rounded-t-xl"
         />
         <div className="flex justify-between pt-3 p-2">
-          <p className="">
+          <p>
             {product.name} {product.category.name} {product.abuotProduct}
           </p>
         </div>
@@ -34,4 +33,4 @@ function Products({ product } : Products) {
   );
 }
 
-export default Products;
+export default ProductsCard;

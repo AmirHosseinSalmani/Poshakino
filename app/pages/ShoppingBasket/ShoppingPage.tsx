@@ -1,22 +1,20 @@
 "use client";
-import { useState } from "react";
+
 import { useShoppingCart } from "@/app/context/ShoppingContext";
 import { LuTrash2 } from "react-icons/lu";
 import Image from "next/image";
 import Link from "next/link";
-import { ProductProps } from "@/app/types/products";
+import { BasketItemProps } from "@/app/types/products";
 
 type ShoppingPageProp = {
-  product: ProductProps;
+  product: BasketItemProps;
 };
 
 function ShoppingPage({ product }: ShoppingPageProp) {
-  console.log(product);
   const { incerease, reduction, removeItem } = useShoppingCart();
-  const [countProduct, setContProduct] = useState(1);
-  const sumPrice = product.price * countProduct;
-  const sumPriceOffer = product.offer * countProduct;
-  const priceOffer = (product.price * countProduct) - sumPriceOffer;
+  const sumPrice = product.price * product.quantity;
+  const sumPriceOffer = product.offer * product.quantity;
+  const priceOffer = product.price * product.quantity - sumPriceOffer;
   return (
     <div>
       <div className="h-54 border-b border-foterli rounded-lg laptop:border p-5">
@@ -51,23 +49,23 @@ function ShoppingPage({ product }: ShoppingPageProp) {
               className="text-xl cursor-pointer px-2"
               onClick={() =>
                 incerease({
-                  count: product.count,
-                  countProduct,
-                  setContProduct,
+                  productID: product.id,
                 })
               }
             >
               +
             </button>
-            <p className="font-vazir">{countProduct.toLocaleString("fa-IR")}</p>
+            <p className="font-vazir">
+              {product.quantity.toLocaleString("fa-IR")}
+            </p>
             <button
               className="text-xl px-2 cursor-pointer"
-              onClick={() => reduction({ setContProduct, countProduct })}
+              onClick={() => reduction({ productID: product.id })}
             >
-              {countProduct == 1 ? (
+              {product.quantity == 1 ? (
                 <LuTrash2
                   size={14}
-                  onClick={() => removeItem({ productId: product.id })}
+                  onClick={() => removeItem({ productID: product.id })}
                 />
               ) : (
                 "-"

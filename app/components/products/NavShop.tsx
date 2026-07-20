@@ -38,7 +38,7 @@ function NavShop({ product }: NavShop) {
           >
             <button
               className="cursor-pointer px-5 py-3 rounded-lg bg-primary text-background text-[13px] font-vazir"
-              onClick={() => addToBasket({product})}
+              onClick={() => addToBasket({ product })}
             >
               افزودن به سبد خرید
             </button>
