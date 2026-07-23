@@ -18,10 +18,13 @@ type colorProps = {
 };
 async function ProductDetails({ params }: PageProps) {
   const { id } = await params;
+  const ID = Number(id);
   const products = await GetProduct();
 
+  console.log(ID);
+  console.log(typeof ID);
   const Product = products.find(
-    (product: ProductProps) => product.id === Number(id),
+    (product: ProductProps) => Number(product.id) === Number(ID),
   );
   if (!Product) {
     return notFound();

@@ -25,12 +25,13 @@ const ShoppingContext = createContext<ShoppingContextType | null>(null);
 export function ShoppingProvider({ children }: ShoppingProviderProp) {
   const [basket, setBasket] = useState<BasketItemProps[]>([]);
   useEffect(() => {
-  const data = localStorage.getItem('basket');
+    const data = localStorage.getItem("basket");
 
-  if (data) {
-    setBasket(JSON.parse(data));
-  }
+    if (data) {
+      setBasket(JSON.parse(data));
+    }
   }, []);
+  
   useEffect(() => {
     localStorage.setItem("basket", JSON.stringify(basket));
   }, [basket]);

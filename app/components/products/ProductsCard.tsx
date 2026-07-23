@@ -8,7 +8,7 @@ type Products = {
 
 function ProductsCard({ product }: Products) {
   return (
-    <Link key={product.id} href={`/product/${product.id}`}>
+    <Link key={product.id} href={`/${product.id}`}>
       <div className="border w-[90%]  border-foterli shadow-xl rounded-xl cursor-pointer">
         <Image
           src={product.image}
